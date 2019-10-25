@@ -46,19 +46,6 @@
             </div>
         </div>
 
-        <script>
-                    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-
-                    if (/android/i.test(userAgent)) {
-                        document.getElementById('appAlert').href = "https://play.google.com/store/apps/details?id=ar.gob.argentinagobar";
-                        document.getElementById('appAlertText').innerHTML = "Disponible para Android.";
-                    }
-
-                    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-                        document.getElementById('appAlert').href = "https://itunes.apple.com/us/app/argentina.gob.ar/id1107620792?l=es&mt=8";
-                        document.getElementById('appAlertText').innerHTML = "Disponible para iOS.";
-                    }
-        </script>
 
 
 
@@ -80,15 +67,15 @@
                             </div>
                         </div>
                         <script>
-                                    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-                                    if (/android/i.test(userAgent)) {
-                                        document.getElementById('appAlert').href = "https://play.google.com/store/apps/details?id=ar.gob.argentinagobar";
-                                        document.getElementById('appAlertText').innerHTML = "Disponible para Android.";
-                                    }
-                                    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-                                        document.getElementById('appAlert').href = "https://itunes.apple.com/us/app/argentina.gob.ar/id1107620792?l=es&mt=8";
-                                        document.getElementById('appAlertText').innerHTML = "Disponible para iOS.";
-                                    }
+                            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+                            if (/android/i.test(userAgent)) {
+                                document.getElementById('appAlert').href = "https://play.google.com/store/apps/details?id=ar.gob.argentinagobar";
+                                document.getElementById('appAlertText').innerHTML = "Disponible para Android.";
+                            }
+                            if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                                document.getElementById('appAlert').href = "https://itunes.apple.com/us/app/argentina.gob.ar/id1107620792?l=es&mt=8";
+                                document.getElementById('appAlertText').innerHTML = "Disponible para iOS.";
+                            }
                         </script>
                     </div>
                 </div>
@@ -491,29 +478,31 @@
     </div>
 </section>
 
+@section Scripts{
+    <script>
+        $(function () {
 
+            $.ajax({
+                url: 'https://spreadsheets.google.com/feeds/list/1p2d9vryjV_k4iFtDTMTMHvn3BS8ACUc_uoL30OpHAxM/1/public/values?alt=json',
+                data: 'json',
+                success: function (response) {
+                    var destacados = response.feed.entry;
+                    //console.log(destacados);
 
-<script>
-            $(function () {
+                    for (i = 0; i < 4; i++) {
+                        titulo = destacados[i].gsx$titulo.$t;
+                        descripcion = destacados[i].gsx$descripcion.$t;
+                        url_sitio = destacados[i].gsx$urlsitio.$t;
+                        url_imagen = destacados[i].gsx$urlimagen.$t;
 
-                $.ajax({
-                    url: 'https://spreadsheets.google.com/feeds/list/1p2d9vryjV_k4iFtDTMTMHvn3BS8ACUc_uoL30OpHAxM/1/public/values?alt=json',
-                    data: 'json',
-                    success: function (response) {
-                        var destacados = response.feed.entry;
-                        //console.log(destacados);
-
-                        for (i = 0; i < 4; i++) {
-                            titulo = destacados[i].gsx$titulo.$t;
-                            descripcion = destacados[i].gsx$descripcion.$t;
-                            url_sitio = destacados[i].gsx$urlsitio.$t;
-                            url_imagen = destacados[i].gsx$urlimagen.$t;
-
-                            $("#destacados").append('<div class="col-xs-12 col-sm-6 col-md-3"> <a href="' + url_sitio + '" class="panel panel-default"> <div style="background-image:url(' + url_imagen + ');" class="panel-heading"></div><div class="panel-body"> <h4>' + titulo + '</h4> <div class="text-muted"> <p>' + descripcion + '</p></div></div></a> </div>');
-                        }
+                        $("#destacados").append('<div class="col-xs-12 col-sm-6 col-md-3"> <a href="' + url_sitio + '" class="panel panel-default"> <div style="background-image:url(' + url_imagen + ');" class="panel-heading"></div><div class="panel-body"> <h4>' + titulo + '</h4> <div class="text-muted"> <p>' + descripcion + '</p></div></div></a> </div>');
                     }
-                })
-
-
+                }
             })
-</script>
+
+
+        })
+    </script>
+
+}
+

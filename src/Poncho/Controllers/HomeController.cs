@@ -28,6 +28,11 @@ namespace Poncho.Controllers
             return View();
         }
 
+        public IActionResult Noticia()
+        {
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();

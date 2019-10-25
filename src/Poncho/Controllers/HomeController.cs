@@ -38,6 +38,12 @@ namespace Poncho.Controllers
             return View();
         }
 
+        public IActionResult PaginaNavegacion()
+        {
+            return View();
+        }
+
+
         public IActionResult Privacy()
         {
             return View();

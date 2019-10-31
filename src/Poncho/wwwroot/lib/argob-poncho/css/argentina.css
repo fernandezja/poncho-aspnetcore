@@ -1,4 +1,4 @@
-@charset "UTF-8";
+﻿@charset "UTF-8";
 /*!
  * Poncho v0.2 (https://github.com/argob/poncho)
  * Copyright 2016
@@ -15,10 +15,10 @@ main a[href^="http://"][target^="_blank"]:after, main a[href^="http://"][target^
   font: normal normal normal 14px/1 FontAwesome;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased; }
-main a.btn:after, main a[href^="http://www.argentina.gob.ar"]:after, main a[href^="https://www.argentina.gob.ar"]:after, main a.panel:after, main a.btn:after, main a.not-external:after, main footer.btn:after, main footer[href^="http://www.argentina.gob.ar"]:after, main footer[href^="https://www.argentina.gob.ar"]:after, main footer.panel:after, main footer.btn:after, main footer.not-external:after {
+main a.btn:after, main a[href^="http://www.argentina.gob.ar"]:after, main a[href^="https://www.argentina.gob.ar"]:after, main a.card:after, main a.btn:after, main a.not-external:after, main footer.btn:after, main footer[href^="http://www.argentina.gob.ar"]:after, main footer[href^="https://www.argentina.gob.ar"]:after, main footer.card:after, main footer.btn:after, main footer.not-external:after {
   content: none !important; }
 main .social-share a:after,
-main .panel a:after,
+main .card a:after,
 main .alert a:after,
 main a.alert:after,
 main .nav a:after,
@@ -62,19 +62,19 @@ main .gm-style a:after {
 .radio-inline input[type=radio] {
   padding: 0; }
 
-fieldset.panel.collapsible {
+fieldset.card.collapsible {
   border: none;
   background: none;
   box-shadow: none;
   padding: 0;
   height: initial !important; }
-  fieldset.panel.collapsible legend.panel-heading {
+  fieldset.card.collapsible legend.card-heading {
     border: 0;
     min-height: 0;
     background: none;
     padding: 0;
     margin: 0; }
-    fieldset.panel.collapsible legend.panel-heading a {
+    fieldset.card.collapsible legend.card-heading a {
       display: inline-block;
       font-size: 16px;
       font-weight: 500;
@@ -86,16 +86,16 @@ fieldset.panel.collapsible {
       color: #0072bc;
       text-decoration: underline !important;
       background-color: #e5e5e5 !important; }
-      fieldset.panel.collapsible legend.panel-heading a span {
+      fieldset.card.collapsible legend.card-heading a span {
         display: none; }
-      fieldset.panel.collapsible legend.panel-heading a:hover, fieldset.panel.collapsible legend.panel-heading a:focus {
+      fieldset.card.collapsible legend.card-heading a:hover, fieldset.card.collapsible legend.card-heading a:focus {
         background-color: #ccc !important;
         color: #0072bc; }
-  fieldset.panel.collapsible .panel-body {
+  fieldset.card.collapsible .card-body {
     border: 1px solid #ccc;
     border-radius: 4px;
     padding: 30px 30px 0; }
-    fieldset.panel.collapsible .panel-body .form-group > label.control-label {
+    fieldset.card.collapsible .card-body .form-group > label.control-label {
       font-weight: 400; }
 
 #cd-login {

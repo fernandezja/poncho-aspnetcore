@@ -729,7 +729,7 @@
                         url_sitio = destacados[i].gsx$urlsitio.$t;
                         url_imagen = destacados[i].gsx$urlimagen.$t;
 
-                        $("#destacados").append('<div class="col-xs-12 col-sm-6 col-md-3"> <a href="' + url_sitio + '" class="panel panel-default"> <div style="background-image:url(' + url_imagen + ');" class="panel-heading"></div><div class="panel-body"> <h4>' + titulo + '</h4> <div class="text-muted"> <p>' + descripcion + '</p></div></div></a> </div>');
+                        $("#destacados").append('<div class="col-xs-12 col-sm-6 col-md-3"> <a href="' + url_sitio + '" class="card card-default"> <div style="background-image:url(' + url_imagen + ');" class="card-heading"></div><div class="card-body"> <h4>' + titulo + '</h4> <div class="text-muted"> <p>' + descripcion + '</p></div></div></a> </div>');
                     }
                 }
             })

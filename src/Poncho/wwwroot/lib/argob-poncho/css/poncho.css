@@ -4912,7 +4912,8 @@ select.input-sm {
   font-size: 20px;
   height: 65px;
   line-height: 1.3333333;
-  padding: 10px 20px; }
+  padding: 25px 20px;
+  }
 
 .input-group-lg > .input-group-btn > .btn .glyphicon {
   font-size: 1.4em; }

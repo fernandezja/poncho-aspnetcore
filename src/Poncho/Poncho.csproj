@@ -8,6 +8,7 @@
   <ItemGroup>
     <Folder Include="wwwroot\lib\argob-poncho\" />
     <Folder Include="wwwroot\lib\bootstrap\" />
+    <Folder Include="wwwroot\lib\jquery\" />
   </ItemGroup>
 
 </Project>

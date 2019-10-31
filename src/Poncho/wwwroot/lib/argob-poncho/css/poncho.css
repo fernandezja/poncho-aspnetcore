@@ -2797,13 +2797,6 @@ dd {
   margin-right: 5px;
   display: inline-block; }
 
-.media .media-body,
-.media .media-body h3,
-.media .media-body p{
-    color: #333333;
-    text-decoration: none;
-}
-
 
 @media screen and (max-width: 767px) {
     h2 {
@@ -4594,8 +4587,28 @@ a.card {
 .flex-row:after {
   content: normal; }
 
+
+.card-equal-height {
+
+}
+
+.row.card-equal-height {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+    .row.card-equal-height > [class*='col-'] {
+        display: flex;
+        flex-direction: column;
+    }
+
+.card {
+    flex: 1;
+}
+
+
 @media screen and (min-width: 768px) {
-  .card.card-default .card-heading {
+    .card.card-default .card-heading {
     min-height: 180px; }
 
   .card.card-default.card-lg .card-heading {

@@ -2682,6 +2682,13 @@ a.bg-danger {
 .nav > li > a {
   text-decoration: none; }
 
+.btn-close {
+    margin-top: 7px !important;
+    margin-bottom: 10px !important;
+    margin-right: 10px !important; 
+}
+
+.nav-item >
 .page-sidebar {
   margin-bottom: 48px;
   padding: 0; }
@@ -2805,6 +2812,13 @@ dd {
   h3 {
     font-size: 32px; }
 
+    navbar.navbar-top .input-group {
+        width: 100%;
+    }
+    #buscar-btn {
+        margin-left: 0px;
+    }
+
   article h1.icon {
     font-size: 8em;
     line-height: 1.5;
@@ -2817,6 +2831,9 @@ dd {
 
   .submenu li a {
     padding-right: 60px !important; } }
+.navbar .navbar-brand {
+    padding: 0px 0px ;
+}
 @media screen and (max-width: 767px) {
   blockquote {
     text-align: center; }
@@ -3852,6 +3869,7 @@ header .btn-group > .btn:first-child {
     display: none; }
   .navbar.navbar-top.state-search .navbar-nav.navbar-right {
     margin: 0;
+    margin-bottom: 0px !important;
     display: block !important; }
     .navbar.navbar-top.state-search .navbar-nav.navbar-right > .btn {
       margin: 13px 15px 0 0;
@@ -3883,7 +3901,7 @@ header .btn-group > .btn:first-child {
     margin-top: 15px; }
 
   .navbar .navbar-brand {
-    height: 64px;
+    height: 57px;
     padding: 14px 15px;
     line-height: 1.8; }
     .navbar .navbar-brand img {
